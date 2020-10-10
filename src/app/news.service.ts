@@ -15,6 +15,6 @@ export class NewsService {
   constructor(private http: HttpClient) {}
 
   fetchData(url){
-    this.http.get(`${API_URL}/${url}&apikey=${API_KEY}`);
+    return this.http.get(`${API_URL}/${url}&apikey=${API_KEY}`);
   }
 }
