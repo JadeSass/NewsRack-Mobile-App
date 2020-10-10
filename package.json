@@ -1,7 +1,7 @@
 {
-  "name": "Ionic-Framework",
+  "name": "NewsRack",
   "version": "0.0.1",
-  "author": "Ionic Framework",
+  "author": "Oladuti Pelumi Ezekiel",
   "homepage": "https://ionicframework.com/",
   "scripts": {
     "ng": "ng",
