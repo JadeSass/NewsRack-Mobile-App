@@ -14,12 +14,15 @@
   </ion-header>
 
 <ion-content>
-  <ion-item *ngFor="let article of data?.articles" padding>
-    <ion-avatar slot="start">
-      <img [src]="article.urlToImage">
-    </ion-avatar>
-    <ion-label>{{article.title}}</ion-label>
-  </ion-item>
+  <ion-card *ngFor="let article of data?.articles" (click)="mainPage(article)">
+    <ion-img [src]="article.image"></ion-img>
+
+    <ion-card-content>
+      <ion-card-title>{{article.title}}</ion-card-title>
+      <ion-card-subtitle>{{article.description}}</ion-card-subtitle>
+
+    </ion-card-content>
+  </ion-card>
 </ion-content>
 
   <app-explore-container name="Tab 1 page"></app-explore-container>

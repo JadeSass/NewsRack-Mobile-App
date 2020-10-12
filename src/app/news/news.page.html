@@ -1,9 +1,21 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title>news</ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/tab1">Back</ion-back-button>
+    </ion-buttons>
+    <ion-title>{{article.title}}</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
+  <ion-card >
+    <ion-img [src]="article.image"></ion-img>
 
+    <ion-card-content>
+      <ion-card-title>{{article.title}}</ion-card-title>
+      <p>{{article.content}}</p><br><br>
+
+      <p>Unable to fetch all ne article because we are not a PRO subcriber.</p>
+    </ion-card-content>
+  </ion-card>
 </ion-content>

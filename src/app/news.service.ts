@@ -3,6 +3,7 @@ import { environment } from '../environments/environment';
 import { HttpClient } from '@angular/common/http';
 
 
+
 const API_KEY = environment.apiKey;
 const API_URL = environment.apiUrl;
 
@@ -11,10 +12,9 @@ const API_URL = environment.apiUrl;
   providedIn: 'root'
 })
 export class NewsService {
-
+  currentArticle:any;
   constructor(private http: HttpClient) {}
-
   fetchData(url){
-    return this.http.get(`${API_URL}/${url}&apikey=${API_KEY}`);
+    return this.http.get(`${API_URL}/${url}?&token=${API_KEY}`);
   }
 }
